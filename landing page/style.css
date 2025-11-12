@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: plum;
+    display: flex;
+}
+
+#part1 {
+    height: 100%;
+    width: 26%;
+    /* background-color: aquamarine; */
+}
+
+#part2 {
+    height: 100%;
+    width: 67%;
+    background-color: rgb(255, 127, 191);
+    background-image: url(https://images.unsplash.com/photo-1611601147557-cdc89476ec4a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470);
+    background-size: cover;
+    background-position: center;
+}
+
+.over {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(114, 51, 109, 0.452);
+}
+
+#part3 {
+    height: 100%;
+    width: 7%;
+    /* background-color: rgb(122, 199, 51); */
+    background-color: plum
+}
+
+#text {
+    height: 300px;
+    position: absolute;
+    width: 400px;
+    left: 7%;
+    top: 30%;
+    transform: translate(0, -50);
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#text>h1 {
+    font-size: 75px;
+    font-family: monument;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 70px;
+    letter-spacing: 2px;
+    color: aliceblue;
+}
+
+#small-ima {
+    height: 350px;
+    width: 280px;
+    position: absolute;
+    top: 23%;
+    right: 4%;
+    transform: translate(0, -50);
+    background-image: url(https://images.unsplash.com/photo-1518895949257-7621c3c786d7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1376);
+    background-position: center;
+    background-size: cover;
+    animation-name: small;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#dive {
+    position: absolute;
+    right: 380px;
+    top: 30px;
+}
+
+#dive>h1 {
+    font-weight: 800;
+    font-family: gillroy;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+#dive>h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 0;
+    background-color: black;
+    left: 0;
+    animation-name: line;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes line {
+    0% {
+        width: 0;
+        left: 0%;
+    }
+
+    50% {
+        width: 100%;
+        left: 0%;
+    }
+
+    75% {
+        width: 0%;
+        left: 100%;
+        right: 0%;
+    }
+
+    100% {
+        width: 100%;
+        left: 0%;
+        right: 100%;
+    }
+}
+
+@keyframes move {
+    0% {
+        left: -10%;
+    }
+
+    100% {
+        left: 9%;
+    }
+}
+
+@keyframes small {
+    0% {
+        top: -10%;
+    }
+}
