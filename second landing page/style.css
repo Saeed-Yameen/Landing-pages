@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* HERO SECTION */
+#top {
+    width: 100%;
+    height: 90vh;
+    background-image: url(https://images.unsplash.com/photo-1757330878545-23961934f9ed?q=80&w=1160&auto=format&fit=crop);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+#over-lay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    position: absolute;
+}
+
+#text {
+    position: absolute;
+    bottom: 10%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    color: #fff;
+}
+
+#text h1 {
+    font-size: 6vw;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+    flex-basis: 100%;
+}
+
+#textright {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.me {
+    flex: 1 1 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    min-width: 250px;
+}
+
+.me h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.me p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #eee;
+}
+
+.me i {
+    font-size: 22px;
+    margin-right: 10px;
+    color: #fff;
+    transition: transform 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.me i:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+#bottom {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+}
+
+#bottom>div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    text-transform: uppercase;
+}
+
+#bone {
+    background-color: #8e44ad;
+}
+
+#btwo {
+    background-color: #e74c3c;
+}
+
+#bthree {
+    background-color: #d35400;
+}
+
+#bfour {
+    background-color: #27ae60;
+}
+
+#bottom>div:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+section {
+    padding: 60px 10%;
+    background-color: #f5f5f5;
+}
+
+.section-content {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    background-color: #27ae60;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #219150;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    #text h1 {
+        font-size: 8vw;
+    }
+
+    #textright {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .me {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #text h1 {
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .me {
+        width: 100%;
+        text-align: center;
+    }
+
+    .me i {
+        margin: 5px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
